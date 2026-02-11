@@ -1,13 +1,13 @@
 :root {
     --bg-color: #050505;
-    --card-bg: rgba(20, 20, 25, 0.7);
+    --card-bg: rgba(20, 15, 25, 0.7);
     --text-primary: #ffffff;
-    --text-secondary: #a0a0b0;
-    --accent-blue: #0070f3;
+    --text-secondary: #d0a0d0;
+    --accent-pink: #ff0080;
     --accent-violet: #7928ca;
-    --accent-gradient: linear-gradient(135deg, #0070f3 0%, #7928ca 100%);
-    --glass-border: rgba(255, 255, 255, 0.1);
-    --input-focus: rgba(0, 112, 243, 0.3);
+    --accent-gradient: linear-gradient(135deg, #ff0080 0%, #7928ca 100%);
+    --glass-border: rgba(255, 200, 255, 0.1);
+    --input-focus: rgba(255, 0, 128, 0.3);
 }
 
 * {
@@ -48,7 +48,7 @@ body {
 .blob-1 {
     width: 400px;
     height: 400px;
-    background: var(--accent-blue);
+    background: var(--accent-pink);
     top: -100px;
     right: -100px;
 }
@@ -64,7 +64,7 @@ body {
 .blob-3 {
     width: 250px;
     height: 250px;
-    background: #00e5ff;
+    background: #ff00ff;
     top: 40%;
     left: 30%;
 }
@@ -159,13 +159,13 @@ h1 {
 .rating-scale label:hover {
     background: rgba(255, 255, 255, 0.1);
     transform: translateY(-2px);
-    border-color: var(--accent-blue);
+    border-color: var(--accent-pink);
 }
 
 .rating-scale input[type="radio"]:checked+label {
     background: var(--accent-gradient);
     border-color: transparent;
-    box-shadow: 0 10px 20px rgba(121, 40, 202, 0.3);
+    box-shadow: 0 10px 20px rgba(255, 0, 128, 0.3);
     color: white;
 }
 
@@ -190,7 +190,7 @@ textarea {
 input[type="text"]:focus,
 textarea:focus {
     outline: none;
-    border-color: var(--accent-blue);
+    border-color: var(--accent-pink);
     background: rgba(255, 255, 255, 0.08);
     box-shadow: 0 0 15px var(--input-focus);
 }
@@ -212,7 +212,7 @@ textarea:focus {
 
 .submit-btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 15px 30px rgba(0, 112, 243, 0.4);
+    box-shadow: 0 15px 30px rgba(255, 0, 128, 0.4);
 }
 
 .submit-btn:active {
