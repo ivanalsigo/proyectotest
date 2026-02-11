@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta de Satisfacción - Curso Antigravity</title>
+    <meta name="description"
+        content="Encuesta para conocer la opinión de los estudiantes sobre el curso de Antigravity.">
+    <!-- Seguridad: Restringir conexiones solo a dominios de confianza -->
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://n8n.srv960136.hstgr.cloud;">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <main class="container">
+        <header class="header">
+            <div class="logo">Antigravity</div>
+            <h1>Tu opinión nos importa</h1>
+            <p>Ayúdanos a mejorar el curso con tus respuestas honestas.</p>
+        </header>
+
+        <form id="survey-form" class="survey-card">
+            <div class="question-group" id="q0">
+                <label for="id_estudiante">ID del Estudiante</label>
+                <p class="helper-text">Introduce tu identificador de alumno</p>
+                <input type="text" id="id_estudiante" name="id_estudiante" placeholder="Ej: ANT-2024-001" required>
+            </div>
+
+            <div class="question-group" id="q1">
+                <label>1. Nivel de satisfacción general</label>
+                <p class="helper-text">De muy insatisfecho a muy satisfecho</p>
+                <div class="rating-scale">
+                    <input type="radio" name="nivel_satisfaccion" id="sat-1" value="1" required>
+                    <label for="sat-1">1</label>
+                    <input type="radio" name="nivel_satisfaccion" id="sat-2" value="2">
+                    <label for="sat-2">2</label>
+                    <input type="radio" name="nivel_satisfaccion" id="sat-3" value="3">
+                    <label for="sat-3">3</label>
+                    <input type="radio" name="nivel_satisfaccion" id="sat-4" value="4">
+                    <label for="sat-4">4</label>
+                    <input type="radio" name="nivel_satisfaccion" id="sat-5" value="5">
+                    <label for="sat-5">5</label>
+                </div>
+            </div>
+
+            <div class="question-group" id="q2">
+                <label>2. Claridad del contenido</label>
+                <p class="helper-text">De muy poco claro a muy claro</p>
+                <div class="rating-scale">
+                    <input type="radio" name="claridad_contenido" id="cla-1" value="1" required>
+                    <label for="cla-1">1</label>
+                    <input type="radio" name="claridad_contenido" id="cla-2" value="2">
+                    <label for="cla-2">2</label>
+                    <input type="radio" name="claridad_contenido" id="cla-3" value="3">
+                    <label for="cla-3">3</label>
+                    <input type="radio" name="claridad_contenido" id="cla-4" value="4">
+                    <label for="cla-4">4</label>
+                    <input type="radio" name="claridad_contenido" id="cla-5" value="5">
+                    <label for="cla-5">5</label>
+                </div>
+            </div>
+
+            <div class="question-group" id="q3">
+                <label>3. Aplicabilidad práctica</label>
+                <p class="helper-text">De nada aplicable a muy aplicable</p>
+                <div class="rating-scale">
+                    <input type="radio" name="aplicabilidad_practica" id="app-1" value="1" required>
+                    <label for="app-1">1</label>
+                    <input type="radio" name="aplicabilidad_practica" id="app-2" value="2">
+                    <label for="app-2">2</label>
+                    <input type="radio" name="aplicabilidad_practica" id="app-3" value="3">
+                    <label for="app-3">3</label>
+                    <input type="radio" name="aplicabilidad_practica" id="app-4" value="4">
+                    <label for="app-4">4</label>
+                    <input type="radio" name="aplicabilidad_practica" id="app-5" value="5">
+                    <label for="app-5">5</label>
+                </div>
+            </div>
+
+            <div class="question-group" id="q4">
+                <label for="comentarios_adicionales">4. Comentarios adicionales</label>
+                <textarea id="comentarios_adicionales" name="comentarios_adicionales"
+                    placeholder="Cuéntanos más sobre tu experiencia..."></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Enviar Encuesta</button>
+        </form>
+
+        <div id="success-message" class="success-message hidden">
+            <div class="success-icon">✓</div>
+            <h2>¡Gracias por participar!</h2>
+            <p>Tu feedback es vital para nosotros.</p>
+            <button onclick="location.reload()" class="reset-btn">Volver a empezar</button>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
